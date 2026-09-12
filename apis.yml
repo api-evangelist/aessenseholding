@@ -1,17 +1,70 @@
 aid: aessenseholding
-name: Aessenseholding
-description: 'Aessenseholding is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+name: AEssenseGrows
+description: >-
+  AEssenseGrows is the operating brand of AEssense Corporation (held as AEssense
+  Holding), a precision agtech manufacturer founded in Silicon Valley in 2014 by
+  Robert Chen and headquartered at 205 E Alma Ave, San Jose, California, with a
+  second facility in Jiading, Shanghai. It designs and builds fully automated
+  zero-soil aeroponic SmartFarms for commercial indoor growers — the modular,
+  stackable AEtrium-2.1 cloning and vegging system, the AEtrium-4 and Double
+  Deck AEtrium-4 bloom systems, the compact Nursery-6, and the AEtrium Automated
+  Dosing Unit — together with the AExcel, Aerix, AEdge and Blaze LED and
+  horticultural lighting lines and a design-build-test-train-transfer consulting
+  practice. The hardware is wired with a blanket of precision sensors and driven
+  by Guardian Grow Manager, the company's own control software, which automates
+  nutrient dosing, irrigation, photoperiod, pH, CO2, humidity and temperature
+  against customer-authored Grow Plan recipes, logs and analyzes the resulting
+  grow data, and offers remote access and alerting from any browser. A second
+  brand, AEssenseFresh (aessensefresh.com), takes the same platform to leafy
+  greens and fresh produce; the cannabis line has been licensed to integrate
+  California's Metrc seed-to-sale system, which makes Guardian a consumer of a
+  third-party regulatory API rather than a producer of one. AEssenseGrows
+  operates no public developer program: there is no developer portal, no API
+  reference, no OpenAPI, AsyncAPI, GraphQL SDL or Postman collection, no
+  first-party SDK on any package registry, and no GitHub organization. Guardian
+  ships only as an end-user product bundled with the hardware it controls, and
+  the public Technical Document Library is product brochures and UL/CE
+  datasheets in PDF. Customer documentation beyond that sits behind a Grow
+  Partner Portal private-access request form.
 url: https://raw.githubusercontent.com/api-evangelist/aessenseholding/refs/heads/main/apis.yml
+image: https://www.aessensegrows.com/hubfs/AEssense%20Grows%20Logo%20V00%20MIXED%202.png
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: no-developer-program-hardware-bundled-control-software
 specificationVersion: '0.20'
 created: '2026-09-12'
 modified: '2026-09-12'
 tags:
 - Company
+- Agriculture
+- AgTech
+- Aeroponics
+- Hydroponics
+- Vertical Farming
+- Controlled Environment Agriculture
+- Indoor Farming
+- Automation
+- Industrial IoT
+- LED Lighting
+- Cannabis
+- Hardware
+- Manufacturing
+tags_raw:
+- Company
+- Agriculture
+- AgTech
+- Aeroponics
+- Hydroponics
+- Vertical Farming
+- Controlled Environment Agriculture
+- Indoor Farming
+- Automation
+- Industrial IoT
+- LED Lighting
+- Cannabis
+- Hardware
+- Manufacturing
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +73,61 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://equityzen.com/company/aessenseholding
+  url: https://www.aessensegrows.com/en/
+- type: Support
+  url: https://www.aessensegrows.com/en/contact-us-cultivation
+- type: Blog
+  url: https://www.aessensegrows.com/en/resources/plant-science-test-kitchen-blog
+- type: TermsOfService
+  url: https://www.aessensegrows.com/en/corporate/terms
+- type: PrivacyPolicy
+  url: https://www.aessensegrows.com/en/corporate/privacy
+- type: DomainSecurity
+  url: security/aessenseholding-domain-security.yml
+- type: Conformance
+  url: conformance/aessenseholding-conformance.yml
+- type: Packages
+  url: packages/aessenseholding-packages.yml
+- type: Plans
+  url: plans/aessenseholding-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/aessenseholding-rate-limits.yml
+- type: LLMsTxt
+  url: llms/aessenseholding-llms.txt
+x-enrichment:
+  date: '2026-09-12'
+  status: minimal
+  artifacts_added: 7
+  pass: local-v3
+  note: >-
+    Full STEP 0b contract discovery ran against every host the record knows —
+    www.aessensegrows.com, the apex, and the AEssenseFresh brand host — plus registry and
+    code-host searches. No OpenAPI, Swagger, GraphQL, AsyncAPI, MCP, A2A card, .proto,
+    WSDL, llms.txt or security.txt exists anywhere; a nonsense control path 404s on every
+    host, so the negatives are real. The company's only machine-readable document is its
+    sitemap. Artifacts written record measured absences, not fabricated surfaces.
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    AEssenseGrows sells aeroponic SmartFarm hardware whose Guardian Grow Manager control
+    software ships bundled with the machines as an operator web application reached by
+    demo request — there is no developer portal, no API reference and no GitHub
+    organization, the public Technical Document Library is product brochures and UL/CE
+    datasheets in PDF, and the one regulated machine interface the company is on record
+    as touching (California Metrc seed-to-sale) is one Guardian consumes, not one it
+    publishes.
+  evidence:
+  - url: https://www.aessensegrows.com/en/
+    status: 200
+  - url: https://www.aessensegrows.com/sitemap.xml
+    status: 200
+  - url: https://www.aessensegrows.com/openapi.json
+    status: 404
+  - url: https://www.aessensegrows.com/.well-known/agent-card.json
+    status: 404
+  - url: https://www.aessensegrows.com/llms.txt
+    status: 404
+  - url: https://api.github.com/search/users?q=aessense
+    status: 200
+  checked: '2026-09-12'

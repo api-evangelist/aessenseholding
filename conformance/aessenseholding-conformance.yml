@@ -1,0 +1,117 @@
+generated: '2026-09-12'
+method: probed
+source: >-
+  Live probes of www.aessensegrows.com, aessensegrows.com and www.aessensefresh.com on
+  2026-09-12, plus the company's own press room and Technical Document Library.
+note: >-
+  AEssenseGrows publishes no API contract, so there is no specification to assert
+  contract-level conformance against. What can be asserted is the small set of
+  web-standard documents the company does and does not serve, and one domain-standard
+  observation. Domain standards were considered: controlled-environment agriculture has
+  candidate interchange standards an equipment vendor could adopt — ISO 11783 (ISOBUS),
+  AgGateway ADAPT, OGC SensorThings API for sensor telemetry, MQTT Sparkplug B for
+  industrial device namespaces — and AEssenseGrows declares none of them in any public
+  artifact. The one regulated machine interface the company is on record as touching is
+  Metrc, California's cannabis seed-to-sale track-and-trace system, which Guardian Grow
+  Manager was licensed to integrate. That is a CONSUMED third-party regulatory API, not a
+  contract AEssenseGrows publishes, and it is recorded here as a consumption signal only.
+  Reward-only rubric: nothing below is scored as a failure for a vendor whose market has
+  no adopted machine-readable interchange standard.
+standards:
+- id: rfc9116
+  name: security.txt
+  conforms: false
+  evidence:
+    url: https://www.aessensegrows.com/.well-known/security.txt
+    status: 404
+    detail: >-
+      No RFC 9116 document on any company host. www.aessensefresh.com returns
+      Squarespace's own {"message":"security.txt not found"} JSON stub with a 404.
+- id: llms-txt
+  name: llms.txt
+  conforms: false
+  evidence:
+    url: https://www.aessensegrows.com/llms.txt
+    status: 404
+    detail: No agent-facing site index is published on any company host.
+- id: robots-txt
+  name: robots.txt
+  conforms: true
+  evidence:
+    url: https://www.aessensegrows.com/robots.txt
+    status: 200
+    detail: >-
+      Valid robots.txt that declares the sitemap and disallows only HubSpot preview and
+      preference-center paths. No AI-crawler directives — general crawlers and agents are
+      allowed the whole marketing site.
+- id: sitemaps-org
+  name: sitemaps.org XML sitemap
+  conforms: true
+  evidence:
+    url: https://www.aessensegrows.com/sitemap.xml
+    status: 200
+    detail: >-
+      Complete sitemaps.org 0.9 urlset with lastmod dates covering every public page,
+      declared from robots.txt. It is the only crawlable machine-readable index the
+      company publishes, and it contains no developer, API or reference URL.
+- id: robots-ai-directives
+  name: robots.txt AI-crawler directives
+  conforms: true
+  evidence:
+    url: https://www.aessensefresh.com/robots.txt
+    status: 200
+    detail: >-
+      The AEssenseFresh brand site carries Squarespace's default AI-crawler block list —
+      AI2Bot, anthropic-ai, ClaudeBot, GPTBot, CCBot, Google-Extended, Bytespider,
+      Amazonbot, Meta-ExternalAgent and others — and disallows /api/ (Squarespace platform
+      internals, not a company API). The two company hosts therefore take OPPOSITE agent
+      postures: aessensegrows.com is fully open to agents, aessensefresh.com blocks the
+      major AI crawlers by platform default.
+- id: openapi
+  name: OpenAPI
+  conforms: false
+  evidence:
+    url: https://www.aessensegrows.com/openapi.json
+    status: 404
+    detail: >-
+      No OpenAPI, Swagger, AsyncAPI, GraphQL SDL, Protobuf, WSDL or Postman collection is
+      published at any probed location on any company host.
+domain_standards:
+- id: metrc-seed-to-sale
+  name: Metrc (California cannabis track-and-trace)
+  role: consumed
+  conforms: false
+  evidence:
+    url: https://www.aessensegrows.com/en/news-and-events/aessensegrows-software-delivers-40-faster-growth
+    status: 200
+    detail: >-
+      Company press release dated 2018-02-18 states verbatim "AEssenseGrows has been
+      licensed to integrate California's Metrc system into the software, meaning users
+      will soon have 'seed-to-sale' visibility end-to-end for their operations." This
+      makes Guardian Grow Manager a CONSUMER of a state-mandated regulatory API. No
+      contract, field mapping or schema for that integration is published, so it earns no
+      domain_standard_conformance credit — it is recorded as a consumption fact.
+- id: iso-11783-isobus
+  name: ISO 11783 (ISOBUS)
+  role: none
+  conforms: false
+  evidence:
+    url: https://www.aessensegrows.com/en/resources/document-library
+    status: 200
+    detail: >-
+      Technical Document Library walked in full: brochures and UL/CE product datasheets
+      only. No ISOBUS, AgGateway ADAPT, OGC SensorThings or Sparkplug declaration
+      anywhere on the estate.
+certifications:
+- id: ul-ce
+  name: UL / CE product safety marking
+  scope: hardware
+  evidence:
+    url: https://www.aessensegrows.com/en/resources/document-library
+    status: 200
+    detail: >-
+      UL-CE datasheets are published for the AEtrium-2.1, AEtrium-4, Double Deck
+      AEtrium-4 and the AEtrium Automated Dosing Unit. These are electrical-equipment
+      safety markings for physical hardware, NOT an information-security or data
+      compliance program (no SOC 2, ISO 27001, PCI, HIPAA or FedRAMP is claimed anywhere),
+      so no `Compliance` or `TrustCenter` pointer is emitted in apis.yml.

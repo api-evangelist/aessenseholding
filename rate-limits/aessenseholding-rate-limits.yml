@@ -1,0 +1,31 @@
+generated: '2026-09-12'
+method: probed
+source: >-
+  Live unauthenticated response-header inspection of www.aessensegrows.com,
+  aessensegrows.com and www.aessensefresh.com on 2026-09-12, plus a documentation search
+  for a published limits page.
+limit_count: 0
+note: >-
+  No rate limits are published and none could be observed, because there is no public API
+  to limit. AEssenseGrows operates no developer documentation in which limits could be
+  stated, and live anonymous responses from every company host carry no rate-limit signal
+  — no X-RateLimit-*, no RFC 9331 RateLimit-*, no Retry-After, and no 429 on repeated
+  requests. The only throttling in the path is the hosting platform's own edge policy
+  (HubSpot CMS for aessensegrows.com, Squarespace for aessensefresh.com), which is
+  infrastructure behaviour rather than a documented API contract and exposes nothing an
+  agent could read to back off politely.
+rate_limits: []
+response_headers_observed: []
+exhaustion_status_code: null
+evidence:
+- url: https://www.aessensegrows.com/en/
+  status: 200
+  detail: HubSpot-served marketing page; no rate-limit headers on the response.
+- url: https://www.aessensefresh.com/
+  status: 200
+  detail: Squarespace-served brand site; no rate-limit headers on the response.
+- url: https://www.aessensegrows.com/sitemap.xml
+  status: 200
+  detail: >-
+    Machine-readable document served without any rate-limit signalling; the only
+    crawl guidance the company publishes is robots.txt.

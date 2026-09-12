@@ -1,0 +1,79 @@
+generated: '2026-09-12'
+method: probed
+source: >-
+  Live probes of the /.well-known/ discovery surface on every host this record knows —
+  www.aessensegrows.com, aessensegrows.com (apex) and www.aessensefresh.com — on
+  2026-09-12.
+note: >-
+  Nothing is served. Every named /.well-known/ path 404s on all three AEssense hosts, and
+  a deliberate nonsense control path (/.well-known/__ae_control_probe) also 404s on each,
+  so these are real negatives and not an SPA catch-all answering 200 for everything. No
+  agent card, no api-catalog, no ai-plugin.json, no security.txt, no OAuth or OpenID
+  discovery document anywhere on the estate. There are no API baseURL hosts and no
+  OpenAPI servers[] hosts to add to the probe set, because AEssenseGrows publishes no API
+  contract. This file records a measured absence: per the pipeline contract NO WellKnown
+  and NO SecurityTxt pointer is emitted in apis.yml, because no path returned a real
+  document.
+hit_count: 0
+control_probe:
+  path: /.well-known/__ae_control_probe
+  result: 404 on every host — no soft-200 catch-all detected
+hosts:
+- host: www.aessensegrows.com
+  platform: HubSpot CMS (marketing site, HubSpot-hosted)
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: aessensegrows.com
+  platform: apex; redirects to www for page requests, bare 404 for unknown paths
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: www.aessensefresh.com
+  platform: Squarespace (AEssenseFresh produce brand, same company)
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    note: 'Squarespace answers with its own JSON stub: {"message":"security.txt not found"}'
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404

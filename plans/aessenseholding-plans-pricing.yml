@@ -1,0 +1,32 @@
+generated: '2026-09-12'
+method: searched
+source: >-
+  https://www.aessensegrows.com/en/cultivation,
+  https://www.aessensegrows.com/en/contact-us-cultivation,
+  https://www.aessensegrows.com/sitemap.xml
+note: >-
+  AEssenseGrows publishes no plans, tiers or price list of any kind — not for an API,
+  because it has none, and not for the hardware either. The AEtrium SmartFarm systems,
+  Aerix/AExcel lighting and the Guardian Grow Manager software that ships with them are
+  sold as capital equipment through a quote-and-consult motion: every product page ends
+  in "Request A Free Demo" or "Contact Us", and the sitemap contains no pricing page.
+  The one public number is an operating-cost claim used as marketing on the product
+  catalog page (production costs "as low as $120 per pound" at USA labor rates), which
+  is a yield economics figure and not a price the company charges, so it is deliberately
+  not modelled as a plan. There is no developer tier, no usage-based billing surface and
+  no "contact sales for API access" form to record as an enterprise-only tier.
+plan_count: 0
+plans: []
+pricing_model: quote-only capital equipment; no published price list
+evidence:
+- url: https://www.aessensegrows.com/en/cultivation
+  status: 200
+  detail: Product catalog page; no prices, ends in a demo/contact call to action.
+- url: https://www.aessensegrows.com/en/contact-us-cultivation
+  status: 200
+  detail: Contact/quote form — the company's only commercial entry point.
+- url: https://www.aessensegrows.com/sitemap.xml
+  status: 200
+  detail: >-
+    Full sitemap walked; contains no /pricing, /plans, /store or /shop URL on any of the
+    company's sections.
