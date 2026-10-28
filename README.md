@@ -1,4 +1,4 @@
-# Aessenseholding
+# AEssenseGrows
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,5 +64,95 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Aessenseholding is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://equityzen.com/company/aessenseholding
+AEssenseGrows is the operating brand of AEssense Corporation (held as AEssense Holding), a precision agtech manufacturer founded in Silicon Valley in 2014 by Robert Chen and headquartered at 205 E Alma Ave, San Jose, California, with a second facility in Jiading, Shanghai. It designs and builds fully automated zero-soil aeroponic SmartFarms for commercial indoor growers — the modular, stackable AEtrium-2.1 cloning and vegging system, the AEtrium-4 and Double Deck AEtrium-4 bloom systems, the compact Nursery-6, and the AEtrium Automated Dosing Unit — together with the AExcel, Aerix, AEdge and Blaze LED and horticultural lighting lines and a design-build-test-train-transfer consulting practice. The hardware is wired with a blanket of precision sensors and driven by Guardian Grow Manager, the company's own control software, which automates nutrient dosing, irrigation, photoperiod, pH, CO2, humidity and temperature against customer-authored Grow Plan recipes, logs and analyzes the resulting grow data, and offers remote access and alerting from any browser. A second brand, AEssenseFresh (aessensefresh.com), takes the same platform to leafy greens and fresh produce; the cannabis line has been licensed to integrate California's Metrc seed-to-sale system, which makes Guardian a consumer of a third-party regulatory API rather than a producer of one. AEssenseGrows operates no public developer program: there is no developer portal, no API reference, no OpenAPI, AsyncAPI, GraphQL SDL or Postman collection, no first-party SDK on any package registry, and no GitHub organization. Guardian ships only as an end-user product bundled with the hardware it controls, and the public Technical Document Library is product brochures and UL/CE datasheets in PDF. Customer documentation beyond that sits behind a Grow Partner Portal private-access request form.
+
+**Areas:** Company · Agriculture · AgTech · Aeroponics · Hydroponics · Vertical Farming · Controlled Environment Agriculture · Indoor Farming · Automation · Industrial IoT · LED Lighting · Cannabis
+
+## AEssenseGrows on APIs.io
+
+Everything profiled for AEssenseGrows is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/aessenseholding/](https://apis.io/providers/aessenseholding/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Aessenseholding Domain Security](https://apis.io/security/aessenseholding/aessenseholding-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Aessenseholding Plans Pricing](https://apis.io/plans/aessenseholding/aessenseholding-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Aessenseholding Rate Limits](https://apis.io/rate-limits/aessenseholding/aessenseholding-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.aessensegrows.com/en/)
+- [Support](https://www.aessensegrows.com/en/contact-us-cultivation)
+- [Blog](https://www.aessensegrows.com/en/resources/plant-science-test-kitchen-blog)
+- [Terms of service](https://www.aessensegrows.com/en/corporate/terms)
+- [Privacy policy](https://www.aessensegrows.com/en/corporate/privacy)
+
+## API Evangelist rating
+
+**Kin Score 13.2** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 21.1 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 18.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/aessenseholding/](https://apis.io/providers/aessenseholding/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for AEssenseGrows: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/aessenseholding/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
